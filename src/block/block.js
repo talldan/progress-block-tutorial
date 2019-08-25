@@ -1,8 +1,11 @@
+import nanoid from 'nanoid';
+
 import './editor.scss';
 import './style.scss';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
+const { RichText } = wp.blockEditor;
 
 registerBlockType( 'dan/progress', {
 	title: __( 'Progress' ),
@@ -17,15 +20,24 @@ registerBlockType( 'dan/progress', {
 	edit( { className } ) {
 		return (
 			<div className={ className }>
-				Hello, world!
+
 			</div>
 		);
 	},
 
-	save( { className } ) {
+	save( { className, attributes } ) {
+		const {
+			progressId = `wp-block-dan-progress-${ nanoid() }`,
+			label,
+			value,
+			description,
+		} = attributes;
+
 		return (
 			<div className={ className }>
-				Hello, world!
+				<label htmlFor={ progressId }>{ label }</label>
+				<progress id={ progressId } value={ value } max={ 100 } />
+				{ RichText.isEmpty( description ) && ( <p>{ description }</p> ) }
 			</div>
 		);
 	},
