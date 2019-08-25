@@ -5,4 +5,33 @@
  */
 
 .wp-block-dan-progress  {
+	&__label {
+		font-weight: bold;
+	}
+
+	&__progress {
+		display: block;
+		appearance: none;
+		border: solid 1px $progress-border;
+		height: 0.6em;
+		width: 100%;
+		margin: 0.7em 0 0.8em 0;
+	}
+
+	&__progress::-webkit-progress-bar {
+			background-color: white;
+	}
+
+	&__progress::-webkit-progress-value {
+		background-color: $progress-fill;
+	}
+
+	&__progress::-moz-progress-bar {
+		background-color: $progress-fill;
+	}
+
+	&__description {
+		margin: 0;
+		font-size: 20px;
+	}
 }

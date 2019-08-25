@@ -9,3 +9,28 @@
  *
  * CSS for both Frontend+Backend.
  */
+.wp-block-dan-progress__label {
+  font-weight: bold; }
+
+.wp-block-dan-progress__progress {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 1px #555d66;
+  height: 0.6em;
+  width: 100%;
+  margin: 0.7em 0 0.8em 0; }
+
+.wp-block-dan-progress__progress::-webkit-progress-bar {
+  background-color: white; }
+
+.wp-block-dan-progress__progress::-webkit-progress-value {
+  background-color: #7dcaeb; }
+
+.wp-block-dan-progress__progress::-moz-progress-bar {
+  background-color: #7dcaeb; }
+
+.wp-block-dan-progress__description {
+  margin: 0;
+  font-size: 20px; }
