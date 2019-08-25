@@ -1,3 +1,11 @@
+# Progress Block
+
+This is an unfinished Gutenberg block created for a talk at the Perth WordPress Meetup.
+
+[Tutorial Steps](/src/block/block-tutorial.md)
+
+## More info
+
 This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
 
 Below you will find some information on how to run scripts.
